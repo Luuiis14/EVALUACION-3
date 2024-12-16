@@ -1,9 +1,9 @@
--- Script de Base de Datos para el Sistema de Gestión de Empleados
+
 
 CREATE DATABASE GestionEmpleados;
 USE GestionEmpleados;
 
--- Tabla de Usuarios
+
 CREATE TABLE Usuario (
     id_usuario INT AUTO_INCREMENT PRIMARY KEY,
     nombre_usuario VARCHAR(50) NOT NULL,
@@ -12,7 +12,6 @@ CREATE TABLE Usuario (
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Tabla de Empleados (Hereda atributos de Usuario)
 CREATE TABLE Empleado (
     id_empleado INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL,
@@ -24,7 +23,7 @@ CREATE TABLE Empleado (
     FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
 );
 
--- Tabla de Indicadores Económicos
+
 CREATE TABLE IndicadorEconomico (
     id_indicador INT AUTO_INCREMENT PRIMARY KEY,
     nombre_indicador VARCHAR(50) NOT NULL,
@@ -33,7 +32,7 @@ CREATE TABLE IndicadorEconomico (
     fuente VARCHAR(100) NOT NULL
 );
 
--- Tabla de Registro de Indicadores
+
 CREATE TABLE RegistroIndicador (
     id_registro INT AUTO_INCREMENT PRIMARY KEY,
     id_indicador INT NOT NULL,
