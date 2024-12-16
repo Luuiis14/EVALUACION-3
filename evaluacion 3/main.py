@@ -1,7 +1,9 @@
 # main.py
 from negocio.encriptacion import encriptar, desencriptar
-from negocio.procesamiento import procesar_y_guardar
+from negocio.procesamientos import procesar_y_guardar
 from datos.crud import obtener_publicaciones
+from auxiliares.constantes import URL_API
+
 
 def menu():
     while True:

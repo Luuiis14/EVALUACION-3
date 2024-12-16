@@ -1,6 +1,6 @@
 # datos/crud.py
 from modelos.publicaciones import Base, Publicacion
-from datos.conexion import engine, session
+from datos.conexión import engine, session
 
 Base.metadata.create_all(engine)
 

@@ -1,2 +1,2 @@
 # auxiliares/__init__.py
-from constantes import URL_API, TIPOS_DATOS
+from auxiliares.constantes import URL_API, TIPOS_DATOS
